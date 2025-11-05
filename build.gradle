@@ -20,6 +20,10 @@ spotless {
     }
 }
 
+tasks.named('spotlessJava') {
+    dependsOn 'compileJava', 'generateJava', 'processResources'
+}
+
 repositories {
     mavenCentral()
 }
